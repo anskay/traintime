@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee Data Management</title>
+
+	<!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+	
+	<!-- Link to Moment.js should go here -->
+ 	 <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <!-- Bootstrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!--style sheets-->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div id="header">
+				<div class="jumbotron">
+					<h1>Hong Kong Train Time</h1>
+					<h4>Catch it or Miss it!</h4>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div id="Current-Train">
+				<div class="panel-heading">
+				    <h3 class="panel-title"><strong>Current Train Schedule</strong></h3>
+				 </div>
+				<table class="u-full-width">
+				  <thead>
+				    <tr>
+				      <th>Train Name</th>
+				      <th>Destination</th>
+				      <th>Frequency (min)</th>
+				      <th>Next Arrival</th>
+				      <th>Mins Away</th>
+				    </tr>
+				  </thead>
+				  <tbody></tbody>
+				</table>
+			</div>
+		</div>
+		<div class="row">
+			<div id="Add-Train">
+				<div class="panel-heading">
+				    <h3 class="panel-title"><strong>Add Train</strong></h3>
+				  </div>
+				<form>
+				  <label for="name">Train Name </label>
+				  <textarea class="u-full-width" id="name"></textarea>
+				   <div class="u-full-width">
+
+				      <label for="destination">Destination</label>
+				       <textarea class="u-full-width" id="destination"></textarea>
+
+				       <label for="firstTrain">First Train Time (hh:mm military time)</label>
+				       <textarea class="u-full-width" id="firstTrain"></textarea>
+
+				     <label for="frequency">Frequency (min)</label>
+				      <textarea class="u-full-width" id="frequency"></textarea>
+
+				    </div>
+				  <input class="button-primary" type="submit" id="newTrain" value="Submit">
+				</form>
+			</div>
+		</div>
+	</div>
+
+<script src="app.js"></script>
+</body>
+</html>
